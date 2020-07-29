@@ -9,7 +9,7 @@ def apply_coupons(cart, coupons)
   apply_coupons = collection.each do |grocery_item|
     grocery_item[:item] == name
     index += 1
-    binding.pry
+  binding.pry
   end
 end
 
