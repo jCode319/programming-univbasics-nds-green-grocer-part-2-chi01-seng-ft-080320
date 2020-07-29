@@ -4,11 +4,11 @@ require 'pry'
 def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   #binding.pry
-  index = 0
-
-  apply_coupons = collection.each do |grocery_item|
-    grocery_item[:item] == name
-    index += 1
+  i = 0
+  while i < coupons.length
+    cart_item = find_item_by_name_in_collection(coupon[i][:item], cart)
+          i += 1
+  end
   end
   binding.pry
 end
