@@ -10,10 +10,17 @@ def apply_coupons(cart, coupons)
     coupon_item = "#{coupon[i][:item]} W/COUPON"
     cart_item_with_coupon = find_item_by_name_in_collection(coupon_item, name)
     if cart_item && cart_item[:count] >= coupon[i][:num]
-          i += 1
-
+      if cart_item_with_coupon
+        cart_item_with_coupon[:count] += coupon[i][:num]
+        cart_item[:count] -= coupon[i][:num]
+      else
+        cart_item_with_coupon = {
+          
+        }
+      end
+    end
+    i += 1
   end
-  binding.pry
 end
 
 def apply_clearance(cart)
