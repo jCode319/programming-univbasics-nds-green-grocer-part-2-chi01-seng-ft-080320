@@ -3,7 +3,13 @@ require 'pry'
 
 def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
-  binding.pry
+  #binding.pry
+  index = 0
+  
+  apply_coupons = collection.each do |grocery_item|
+    grocery_item[:item] == name
+    index += 1
+    binding.pry
 end
 
 def apply_clearance(cart)
