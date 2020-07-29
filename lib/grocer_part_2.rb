@@ -10,6 +10,7 @@ def apply_coupons(cart, coupons)
     grocery_item[:item] == name
     index += 1
     binding.pry
+  end
 end
 
 def apply_clearance(cart)
